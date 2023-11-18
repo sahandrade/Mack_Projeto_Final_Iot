@@ -1,0 +1,1029 @@
+[
+    {
+        "id": "fe1c13444b0f71dd",
+        "type": "tab",
+        "label": "Fluxo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "366d5cd357d10816",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "20f5b48f.283ffc",
+        "type": "subflow",
+        "name": "Timer Settings (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 500,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "dd09ea56.667bf8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 740,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "dd09ea56.667bf8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "TimerNumber",
+                "type": "num",
+                "value": ""
+            },
+            {
+                "name": "PayloadON",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "PayloadOFF",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "4b5e24d6d5494e47",
+        "type": "serial-port",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "even",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "b0f404348e8ab9d7",
+        "type": "arduino-board",
+        "device": "COM5"
+    },
+    {
+        "id": "beb53b146b887674",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": "1883",
+        "clientid": "arduinoUno",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "457e9884498843d6",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "963aa2f101f488de",
+        "type": "ui_tab",
+        "name": "Objetos Inteligentes Mackenzie",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "034ba255ecd4d987",
+        "type": "ui_group",
+        "name": "Monitor de Temperatura",
+        "tab": "963aa2f101f488de",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2ce4a339379a7f25",
+        "type": "ui_spacer",
+        "z": "366d5cd357d10816",
+        "name": "spacer",
+        "group": "034ba255ecd4d987",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "37726cbe67ed1435",
+        "type": "ui_group",
+        "name": "Alterar padrões",
+        "tab": "963aa2f101f488de",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd09ea56.667bf8",
+        "type": "function",
+        "z": "20f5b48f.283ffc",
+        "name": "",
+        "func": "var x = env.get(\"TimerNumber\"); \nvar y = env.get(\"PayloadON\"); \nvar z = env.get(\"PayloadOFF\"); \n\nflow.set(\"$parent.Timer\"+x, x);\nflow.set(\"$parent.Payload\"+x+\"_on\", y);\nflow.set(\"$parent.Payload\"+x+\"_off\", z);\n\n\n\nmsg.payload = \"Your timer \" + x + \" has been set\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d01e76ebc92c1def",
+        "type": "aedes broker",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": null,
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d651afe93a1a92fa",
+        "type": "mqtt out",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "topic": "Topico/timestamp",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "beb53b146b887674",
+        "x": 250,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1ba1e5529bed8eb6",
+        "type": "mqtt in",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "topic": "Topico/timestamp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "beb53b146b887674",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "cc8c40b864ebc19f"
+            ]
+        ]
+    },
+    {
+        "id": "b86ed1189e69c8a3",
+        "type": "arduino in",
+        "z": "fe1c13444b0f71dd",
+        "name": "NTC",
+        "pin": "0",
+        "state": "ANALOG",
+        "arduino": "b0f404348e8ab9d7",
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "117d580716333f4f"
+            ]
+        ]
+    },
+    {
+        "id": "a692b59b912a7fb7",
+        "type": "switch",
+        "z": "fe1c13444b0f71dd",
+        "name": "controleTemp",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "max",
+                "vt": "global"
+            },
+            {
+                "t": "lt",
+                "v": "min",
+                "vt": "global"
+            },
+            {
+                "t": "lte",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "18",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "0a89bd378bff3d74"
+            ],
+            [
+                "523f9fbec7cdb3bb"
+            ],
+            [
+                "7cf0970f0aac75cc"
+            ],
+            [
+                "7cf0970f0aac75cc"
+            ]
+        ]
+    },
+    {
+        "id": "ae6610bb94fc3f95",
+        "type": "arduino out",
+        "z": "fe1c13444b0f71dd",
+        "name": "led",
+        "pin": "3",
+        "state": "OUTPUT",
+        "arduino": "b0f404348e8ab9d7",
+        "x": 890,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0a89bd378bff3d74",
+        "type": "change",
+        "z": "fe1c13444b0f71dd",
+        "name": "Calor",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "46acc67fedfd2aa9",
+                "95cf96794eb092b1"
+            ]
+        ]
+    },
+    {
+        "id": "523f9fbec7cdb3bb",
+        "type": "change",
+        "z": "fe1c13444b0f71dd",
+        "name": "Frio",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "3a0b089c52a3959e",
+                "b9a8b47db829bb90"
+            ]
+        ]
+    },
+    {
+        "id": "7cf0970f0aac75cc",
+        "type": "change",
+        "z": "fe1c13444b0f71dd",
+        "name": "Desliga_led",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "fff63da56918bb2f"
+            ]
+        ]
+    },
+    {
+        "id": "117d580716333f4f",
+        "type": "function",
+        "z": "fe1c13444b0f71dd",
+        "name": "function 1",
+        "func": "// Definir constantes\nconst Vin = 5.0;\nconst T0 = 298.15;\nconst Rt = 10000;\nconst R0 = 10000;\nconst T1 = 273.15;\nconst T2 = 373.15;\nconst RT1 = 35563;\nconst RT2 = 549;\n\n// Inicializar variáveis\nlet beta = 0.0;\nlet Rinf = 0.0;\nlet TempKelvin = 0.0;\nlet T = 0.0;\nlet Vout = 0.0;\nlet Rout = 0.0;\nvar analogueOut = Number(msg.payload);  //Reading from ADC\n\n// Configurar o cálculo de beta e Rinf durante a inicialização\nbeta = Math.log(RT1 / RT2) / ((1 / T1) - (1 / T2));\nRinf = R0 * Math.exp(-beta / T0);\n\nVout = Vin * (analogueOut / 1024.0);\nRout = (Rt * Vout) / (Vin - Vout);\nTempKelvin = beta / Math.log(Rout / Rinf);\nT = TempKelvin - 273.15;\nT = Math.round(T);\nmsg.payload = T;\n\nnode.send({topic: \"Temp\" , payload: T, id: '2'});  //send inforamtion out of node, attach topic to payload for identification later\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "d651afe93a1a92fa",
+                "490e1f4a4fb8f126"
+            ]
+        ]
+    },
+    {
+        "id": "3a0b089c52a3959e",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 400,
+        "wires": [
+            [
+                "536f07868796e253"
+            ]
+        ]
+    },
+    {
+        "id": "46acc67fedfd2aa9",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "ae6610bb94fc3f95"
+            ]
+        ]
+    },
+    {
+        "id": "fff63da56918bb2f",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 240,
+        "wires": [
+            [
+                "ae6610bb94fc3f95"
+            ]
+        ]
+    },
+    {
+        "id": "95cf96794eb092b1",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "e12988f2a9c0f331"
+            ]
+        ]
+    },
+    {
+        "id": "e12988f2a9c0f331",
+        "type": "function",
+        "z": "fe1c13444b0f71dd",
+        "name": "email_calor",
+        "func": "msg.payload = \"Olá! Por favor, verifique o dispositivo de armanezamento, pois a temperatura atingiu o máximo previsto!\"\nmsg.topic = \"Alerta/Temperatura\"\nnode.send({topic: \"Alerta de calor\" , payload: msg.payload, id: '2'});  //send inforamtion out of node, attach topic to payload for identification later\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "ac5a046bba3867b4"
+            ]
+        ]
+    },
+    {
+        "id": "536f07868796e253",
+        "type": "function",
+        "z": "fe1c13444b0f71dd",
+        "name": "email_frio",
+        "func": "msg.payload = \"Prezado, a temperatura do armazenamento do seu medicamento está muito baixa!\"\nnode.send({topic: \"Alerta de frio\" , payload: msg.payload, id: '2'});  //send inforamtion out of node, attach topic to payload for identification later\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 440,
+        "wires": [
+            [
+                "d85a1cc12937f807"
+            ]
+        ]
+    },
+    {
+        "id": "b9a8b47db829bb90",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "ae6610bb94fc3f95"
+            ]
+        ]
+    },
+    {
+        "id": "cc8c40b864ebc19f",
+        "type": "switch",
+        "z": "fe1c13444b0f71dd",
+        "name": "inicio",
+        "property": "inicio",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "a692b59b912a7fb7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b03793a010cd4964",
+        "type": "ui_form",
+        "z": "fe1c13444b0f71dd",
+        "name": "form_temp",
+        "label": "",
+        "group": "37726cbe67ed1435",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Máxima",
+                "value": "max",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mínima",
+                "value": "min",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "max": "",
+            "min": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "3969b5664b2e6f73"
+            ]
+        ]
+    },
+    {
+        "id": "3969b5664b2e6f73",
+        "type": "function",
+        "z": "fe1c13444b0f71dd",
+        "name": "function 2",
+        "func": "\nvar max = msg.payload.max || 0;\n\nglobal.set('max', max);\nmsg.max = max;\n\nvar min = msg.payload.min || 0;\nglobal.set('min', min);\nmsg.min = min;\n\nglobal.set('inicio', 1);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 540,
+        "wires": [
+            [
+                "74c575ac8dc406bc",
+                "07ffbf1b872374db"
+            ]
+        ]
+    },
+    {
+        "id": "3e2e70e901c11c2d",
+        "type": "ui_text",
+        "z": "fe1c13444b0f71dd",
+        "group": "034ba255ecd4d987",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "temperatura",
+        "label": "",
+        "format": "{{msg.payload || 0}} ºC",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": "29",
+        "color": "#000000",
+        "x": 410,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "07ffbf1b872374db",
+        "type": "ui_text",
+        "z": "fe1c13444b0f71dd",
+        "group": "034ba255ecd4d987",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Max",
+        "format": "{{msg.payload.max}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": "16",
+        "color": "#ff0000",
+        "x": 770,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "74c575ac8dc406bc",
+        "type": "ui_text",
+        "z": "fe1c13444b0f71dd",
+        "group": "034ba255ecd4d987",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Min",
+        "format": "{{msg.payload.min }}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "16",
+        "color": "#0000ff",
+        "x": 770,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "490e1f4a4fb8f126",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "3e2e70e901c11c2d",
+                "e6a0be5b2eab1a6b",
+                "6f37573f98126162"
+            ]
+        ]
+    },
+    {
+        "id": "e6a0be5b2eab1a6b",
+        "type": "ui_chart",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "group": "034ba255ecd4d987",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 410,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f37573f98126162",
+        "type": "ui_gauge",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "group": "034ba255ecd4d987",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Medidor",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": "-50",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 460,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "fa8bcfb0dc63f87e",
+        "type": "ui_toast",
+        "z": "fe1c13444b0f71dd",
+        "position": "top right",
+        "displayTime": "10",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "{{msg.topic}}",
+        "name": "",
+        "x": 890,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ac5a046bba3867b4",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "fa8bcfb0dc63f87e"
+            ]
+        ]
+    },
+    {
+        "id": "8f258c6e4bc21ce5",
+        "type": "ui_toast",
+        "z": "fe1c13444b0f71dd",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Alta Temperatura",
+        "name": "",
+        "x": 850,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d85a1cc12937f807",
+        "type": "delay",
+        "z": "fe1c13444b0f71dd",
+        "name": "",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "8f258c6e4bc21ce5"
+            ]
+        ]
+    }
+]
