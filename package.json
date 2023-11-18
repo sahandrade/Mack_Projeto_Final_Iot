@@ -2,7 +2,11 @@
     "name": "Termo_Smart",
     "description": "Sensor de calor com personalização de limite de temperatura",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-aedes": "0.11.1",
+        "node-red-dashboard": "3.6.1",
+        "node-red-node-arduino": "0.3.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

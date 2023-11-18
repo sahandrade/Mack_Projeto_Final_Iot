@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "366d5cd357d10816",
-        "type": "tab",
-        "label": "Fluxo 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "20f5b48f.283ffc",
         "type": "subflow",
         "name": "Timer Settings (2)",
@@ -63,25 +55,6 @@
         ],
         "meta": {},
         "color": "#DDAA99"
-    },
-    {
-        "id": "4b5e24d6d5494e47",
-        "type": "serial-port",
-        "serialport": "COM5",
-        "serialbaud": "9600",
-        "databits": "8",
-        "parity": "even",
-        "stopbits": "1",
-        "waitfor": "",
-        "dtr": "none",
-        "rts": "none",
-        "cts": "none",
-        "dsr": "none",
-        "newline": "\\n",
-        "bin": "false",
-        "out": "char",
-        "addchar": "",
-        "responsetimeout": "10000"
     },
     {
         "id": "b0f404348e8ab9d7",
@@ -235,16 +208,6 @@
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "2ce4a339379a7f25",
-        "type": "ui_spacer",
-        "z": "366d5cd357d10816",
-        "name": "spacer",
-        "group": "034ba255ecd4d987",
-        "order": 1,
-        "width": 1,
-        "height": 1
     },
     {
         "id": "37726cbe67ed1435",
@@ -406,8 +369,8 @@
         "pin": "3",
         "state": "OUTPUT",
         "arduino": "b0f404348e8ab9d7",
-        "x": 890,
-        "y": 220,
+        "x": 850,
+        "y": 240,
         "wires": []
     },
     {
